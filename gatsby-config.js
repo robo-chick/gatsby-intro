@@ -36,8 +36,17 @@ module.exports = {
       {
         resolve: 'gatsby-source-instagram',
         options: {
-          username: 'yogawithtashamarie',
+          username: '10846769832',
         },
       },
+      {
+        resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+        options: {
+          production: true,
+          disable: !process.env.ANALYZE_BUNDLE_SIZE,
+          generateStatsFile: true,
+          analyzerMode: 'static'
+        }
+      }
     ],
   };
